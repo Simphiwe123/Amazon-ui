@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <style>
+      .w3docs {
+        margin-left: 70px;
+        font-weight: bold;
+        text-align: left;
+        font-family: sans-serif, bold, Arial, Helvetica;
+        font-size: 14px;
+      }
+      
+      
+      div input {
+        margin-right: 10px;
+        border-radius: 10px 10px 10px 10px;
+        text-align: center;
+      }
+     
+      form input {
+        padding: 10px;
+      }
+      form select {
+        background-color: #ffffff;
+        padding: 5px;
+      }
+      #rdiv{
+          width: 60%;
+          height: auto;
+          background-color: antiquewhite;
+          float: left;
+          margin-left: 15%;
+          margin-top: 5%;
+
+      }
+      #bimglogo{
+          height: 100px;
+          width: 150px;
+          float: left;
+          margin-top: 0%;
+          margin-left: 0%;
+      }#footerr
+      {
+
+        width: 50%;
+        height: auto;
+        float: left;
+       
+        margin-left: 15%;
+      }
+      #amazonl{
+        float: left;
+       
+        margin-left: 15%;
+      }
+    </style>
+     <script>
+      function ValidationForm() {
+             
+              let email = document.forms["RegForm"]["Email"];
+              let pass = document.forms["RegForm"]["Password"];
+            
+              if(email.value == "") {
+                alert("Please enter a valid e-mail address.");
+                email.focus();
+                return false;
+              }
+              if(email.value.indexOf("@", 0) < 0) {
+                alert("Please enter a valid e-mail address.");
+                email.focus();
+                return false;
+              }
+              if(email.value.indexOf(".", 0) < 0) {
+                alert("Please enter a valid e-mail address.");
+                email.focus();
+                return false;
+              }
+              
+              if(pass.value == "") {
+                alert("Please enter your password");
+                pass.focus();
+                return false;
+              }
+             
+              return true;
+            }
+        </script>
+  </head>
+  <body>
+    <nav>
+
+      <img src="rrlogo.png" id="amazonl">
+  </nav>
+  <div id="rdiv">
+    <h2 style ="text-align: center"> LOGIN </h2>
+    <form name="RegForm" action="home.html" onsubmit="return ValidationForm()" method="post" class="w3docs">
+      <center>
+      
+          
+          <br>
+          <div>
+           
+            <input type="text" id="E-mail" size="60" name="Email" placeholder="Email">
+          </div>
+          <br>
+          <div>
+            
+            <input type="text" id="Password" size="60" name="Password" placeholder="Password">
+          </div>
+         
+        
+          <br>
+          <input type="submit" value="Register" name="Submit">
+          <p>Don't have an account click<a href="reg.html"> here </a>to register.</p>
+          </div>
+      </center>
+    
+    </form>
+    
+  </div>
+    
+   <div id="footerr"><h3 id="blogo">Product of<br><img src="amazon-logo-transparent.png" id="bimglogo"></h3></div> 
+  </body>
+</html>
